@@ -4,6 +4,8 @@ def get_num_words(book_text):
 
 def get_character_count(book_text):
     characters = [char for char in book_text.lower() if char.isalpha()]
+    start_index = book_text.find("START OF THIS PROJECT GUTENBERG EBOOK")
+    end_index = book_text.find("END OF THIS PROJECT GUTENBERG EBOOK")
     char_counts = {}
     for char in characters:
         if char in char_counts:
