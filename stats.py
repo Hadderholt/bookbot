@@ -3,7 +3,7 @@ def get_num_words(book_text):
     return len(words)
 
 def get_character_count(book_text):
-    characters = list(str.lower(book_text))
+    characters = [char for char in book_text.lower() if char.isalpha()]
     char_counts = {}
     for char in characters:
         if char in char_counts:
